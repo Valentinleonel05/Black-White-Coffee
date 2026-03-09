@@ -1,0 +1,520 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+html,body{
+height:100%;
+overflow-x: hidden;
+min-height: 100vh;
+}
+
+body{
+background-image: url('images/1c5e5ca1cdb7a24b8be630575fcb334c.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+color:#0c0c0c;
+max-width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+position:fixed;
+left:-250px;
+top:0;
+
+background:rgb(32, 32, 32);
+color:rgb(222, 222, 222);
+
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:stretch;
+
+padding:30px 0;
+
+z-index:1000;
+
+width: 250px;
+height: 100vh;
+box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+transition: left 0.3s ease;
+
+}
+
+.navbar.open{
+left:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+padding:0 30px;
+margin-bottom:30px;
+}
+
+.menu-btn{
+display:block;
+position:fixed;
+top:20px;
+left:20px;
+z-index:1001;
+font-size:32px;
+cursor:pointer;
+background:rgb(32, 32, 32);
+color:rgb(222, 222, 222);
+width:50px;
+height:50px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+transition: left 0.3s ease;
+}
+
+.menu-btn.open{
+left:220px;
+}
+
+/* MENU LATERAL */
+
+nav{
+
+position:relative;
+top:0;
+right:0;
+
+background:transparent;
+
+display:flex;
+flex-direction:column;
+
+padding:0;
+
+border-radius:0;
+
+}
+
+nav a{
+
+color:rgb(222, 222, 222);
+text-decoration:none;
+
+padding:15px 30px;
+transition: all 0.3s ease;
+
+}
+
+nav a:hover{
+background:rgba(255, 255, 255, 0.1);
+border-left: 4px solid white;
+padding-left: 26px;
+}
+
+nav.open{
+display:flex;
+}
+
+/* SECCIONES */
+
+.hero {
+  background-image: url('images/cafeteria.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+.pagina {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pagina h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.pagina p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+section{
+
+flex:1;
+
+padding:60px;
+max-width: 100%;
+box-sizing: border-box;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+font-size: 30px;
+
+}
+
+.menu {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #111;
+  text-align: center;
+}
+
+/* GRID MENU */
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+/* PRODUCTOS */
+
+.item{
+
+background:white;
+
+padding:40px;
+
+border-radius:10px;
+
+box-shadow:0px 5px 15px rgba(25, 25, 25, 0.08);
+
+transition:0.3s;
+
+}
+
+.item:hover{
+
+transform:translateY(-6px);
+
+}
+
+.item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.item span{
+display:block;
+margin-top:15px;
+font-weight:bold;
+font-size:18px;
+}
+
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* FOOTER */
+
+/* FORMULARIO */
+
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+form input,
+form textarea {
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #999;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: Arial, sans-serif;
+}
+
+form button {
+  padding: 14px 24px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+form button:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(30, 30, 30, 0.2);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+footer{
+
+background: rgb(32, 32, 32);
+color: white;
+
+text-align:center;
+
+padding:20px;
+
+margin-top: auto;
+
+}
+
+/* RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 80px 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 30px 20px;
+    font-size: 22px;
+  }
+
+  .menu {
+    padding: 30px 20px;
+  }
+
+  .menu h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .item {
+    padding: 20px;
+  }
+
+  .item img {
+    height: 180px;
+  }
+
+  .pagina {
+    padding: 30px 20px;
+  }
+
+  .pagina h1 {
+    font-size: 28px;
+  }
+
+  .pagina p {
+    font-size: 16px;
+  }
+
+  form {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .navbar {
+    width: 220px;
+  }
+
+  .menu-btn.open {
+    left: 190px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 20px 15px;
+    font-size: 18px;
+  }
+
+  .menu {
+    padding: 20px 15px;
+  }
+
+  .menu h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .item {
+    padding: 15px;
+  }
+
+  .item h3 {
+    font-size: 18px;
+  }
+
+  .item img {
+    height: 160px;
+  }
+
+  .item span {
+    font-size: 16px;
+  }
+
+  .pagina {
+    padding: 20px 15px;
+  }
+
+  .pagina h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .pagina p {
+    font-size: 15px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  form button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    width: 200px;
+  }
+
+  .logo {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .menu-btn.open {
+    left: 165px;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
